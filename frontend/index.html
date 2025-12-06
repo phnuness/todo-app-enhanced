@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ToDo Enhanced</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>ToDo Enhanced</h1>
+
+    <form id="task-form">
+      <input id="title" placeholder="Título da tarefa" required />
+      <input id="due_date" type="date" />
+      <select id="priority">
+        <option value="low">Baixa</option>
+        <option value="medium" selected>Média</option>
+        <option value="high">Alta</option>
+      </select>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <div class="filters">
+      <label>Filtrar:
+        <select id="filter-priority">
+          <option value="">Todas</option>
+          <option value="high">Alta</option>
+          <option value="medium">Média</option>
+          <option value="low">Baixa</option>
+        </select>
+      </label>
+      <label>
+        Ordem por:
+        <select id="orderBy">
+          <option value="">Criação</option>
+          <option value="due_date">Data de Vencimento</option>
+        </select>
+      </label>
+    </div>
+
+    <ul id="tasks"></ul>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
